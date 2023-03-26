@@ -16,3 +16,8 @@ DATABASES = {
         'PORT': '3306',
     }
 }
+
+4. Check if django is successfully connected to mysql
+Command: python manage.py check
+
+the result must be: System check identified no issues (0 silenced).
