@@ -1,6 +1,7 @@
 # To connect to mysql database
 1. Install mysql in homebrew
-brew install mysql
+brew install mysql (on mac)
+On other OS, please refer to the django's documentation
 
 2. install mysqlclient using pip
 pip install mysqlclient
