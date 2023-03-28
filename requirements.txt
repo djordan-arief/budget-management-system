@@ -1,3 +1,6 @@
 Django
 mysql-connector-python
-mysqlclient
+mysqlclient 
+django-crispy-forms
+crispy-bootstrap4
+django-bootstrap4
