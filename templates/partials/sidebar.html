@@ -1,5 +1,6 @@
 {% load static %}
 <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+  {% if user.is_authenticated %}
   <div class="sidebar-sticky">
     <ul class="nav flex-column">
       <li class="nav-item">
@@ -63,4 +64,5 @@
       </li>
     </ul>
   </div>
+  {% endif %}
 </nav>
