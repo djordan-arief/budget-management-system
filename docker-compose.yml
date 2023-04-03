@@ -1,0 +1,30 @@
+version: '3.9'
+services:
+  # container name
+  mysql-db:
+    # image to use for the container
+    image: mysql:latest
+
+    # restart policy if the container is stopped
+    restart: 'unless-stopped' 
+
+    # set the environment variable
+    environment:
+      - MYSQL_DATABASE=my-db-name
+      - MYSQL_ROOT_PASSWORD=my-db-password
+    
+    # specify the running port for the container
+    ports:
+      - 3000:3000
+
+  django-app:
+    # build the image from the Dockerfile
+    build: ./
+
+    # set the environment variable
+    environment:
+      - MYSQL_PASSWORD=my-db-password
+    
+    # this container start after mysql container
+    depends_on:
+      - mysql-db
